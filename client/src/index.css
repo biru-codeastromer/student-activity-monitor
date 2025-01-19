@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-primary-700 bg-primary-100 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg;
+  }
+
+  .input {
+    @apply appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+}
+
+/* Custom animations */
+.animate-gradient {
+  background-size: 200%;
+  -webkit-animation: AnimateGradient 3s ease infinite;
+  animation: AnimateGradient 3s ease infinite;
+}
+
+@keyframes AnimateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
